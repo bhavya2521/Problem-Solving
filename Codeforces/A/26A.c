@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+main()
+{
+    int s=0,c,x,n,i,j,k;
+    scanf("%d",&n);
+    for(i=6;i<=n;i++)
+    {
+        c=0;
+        for(j=2;j<=i;j++)
+        {
+            x=0;
+            if(i%j==0){
+            for(k=2;k<=sqrt(j);k++)
+            {
+                if(j%k==0)
+                {
+                    x=1;
+                }
+            }
+            if(x==0)
+            {
+                c++;
+            }
+            }
+        }
+        if(c==2)
+        s++;
+    }
+    printf("%d",s);
+}
