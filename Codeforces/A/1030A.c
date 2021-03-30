@@ -1,0 +1,19 @@
+#include<stdio.h>
+main()
+{
+    int n,i,x=0,k;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+       scanf("%d",&k);
+       if(k==1)
+       {
+           x=1;
+           break;
+       }
+    }
+    if(x==1)
+    printf("HARD");
+    else
+    printf("EASY");
+}
