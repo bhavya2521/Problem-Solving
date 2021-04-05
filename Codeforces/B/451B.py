@@ -1,0 +1,33 @@
+n=int(input())
+l=list(map(int,input().split()))
+a=-1
+b=-1
+for i in range(n-1):
+    if(a==-1):
+        if(l[i]>l[i+1]):
+            a=i
+    elif(b==-1):
+        if(l[i]<l[i+1]):
+            b=i
+    else:
+        break
+if(a==-1 and b==-1):
+    print("yes")
+    print(1,1)
+else:
+    if(b==-1):
+        b=n-1
+    r=l[a:b+1]
+    r.reverse()
+    x=l[:a]
+    y=l[b+1:]
+    p=[]
+    p.extend(x)
+    p.extend(r)
+    p.extend(y)
+    l.sort()
+    if(p==l):
+        print("yes")
+        print(a+1,b+1)
+    else:
+        print("no")
