@@ -1,0 +1,25 @@
+t=int(input())
+for _ in range(t):
+    n=int(input())
+    c=0
+    if(n!=1):
+        if(n%3!=0):
+            c=-1
+        else:
+            x=0
+            y=0
+            m=n
+            while(m%3==0):
+                x+=1
+                m=m//3
+            m=n
+            while(m%2==0):
+                y+=1
+                m=m//2
+            if((2**y)*(3**x)!=n):
+                c=-1
+            elif(y>x):
+                c=-1
+            else:
+                c=(x-y+x)
+    print(c)
