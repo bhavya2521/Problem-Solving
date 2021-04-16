@@ -1,0 +1,38 @@
+#include<stdio.h>
+main()
+{
+    int n,i,c=0,j,x,y;
+    scanf("%d",&n);
+    char a[n];
+    scanf("%s",&a);
+    for(i=1;i<n;i++)
+    {
+        if(a[i]!=a[0])
+        {
+          c=1;
+          break;
+        }
+    }
+    if(c==0)
+    {
+        for(i=1;i<n;i++)
+        printf("%c",a[i]);
+    }
+    else
+    {
+        for(i=0;i<n-1;i++)
+		{
+			x=a[i],y=a[i+1];
+			if(x>y)
+			{
+			break;
+			c=i;
+			}
+		}
+		for(j=0;j<n;j++)
+		{
+		if(j!=i)
+		printf("%c",a[j]);
+		}
+	}
+}
